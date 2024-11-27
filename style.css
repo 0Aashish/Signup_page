@@ -1,0 +1,52 @@
+.box {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    display: block;
+    width: 75%;
+    margin-top: 8px;
+}
+
+#email{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#password{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 1em;
+}
+
+.success {
+    color: green;
+    font-size: 1em;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+#btn {
+    padding: 5px;
+    width: 30%;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 5px;
+}
