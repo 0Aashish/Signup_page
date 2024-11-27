@@ -2,7 +2,7 @@
 const email = document.getElementById("email")
 const emailerror = document.getElementById("emailError")
 
-email.addEventListener("input", () => {
+email.addEventListener("input", function emailValid() {
   const emailValue = email.value;
 
   if(emailValue.length > 3 && emailValue.includes('@') && emailValue.includes('.')) {
@@ -20,7 +20,7 @@ const password = document.getElementById("password")
 const passworderror = document.getElementById("passwordError")
 const passwordsuccess = document.getElementById("passwordSuccess")
 
-password.addEventListener("input", () => {
+password.addEventListener("input", function passwordValid() {
   const passwordValue = password.value
 
   if(passwordValue.length >= 8)
@@ -36,11 +36,13 @@ password.addEventListener("input", () => {
 })
 
 
-//   Confirmation window
+//   Confirmation window / Submit
 const submit = document.getElementById("btn")
 
 submit.addEventListener("click", () => {
-  if(email && password)
+  const Validemail = emailValid
+  const Validpassword = passwordValid
+  if(Validemail && Validpassword)
   {
     const confirm = window.confirm("Confirm to submit.")
     if(confirm)
@@ -49,7 +51,7 @@ submit.addEventListener("click", () => {
     }
     else
     {
-      // document.getElementById("form").requestFullscreen();
+      
     }
   }
 })
